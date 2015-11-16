@@ -15,8 +15,8 @@ fi
 
 # General the email/password hash and remove evidence.
 if [ ! -z "${EMAIL}" ] && [ ! -z "${EMAILPASS}" ]; then
-    echo "127.0.0.1:25025    ${EMAIL}:${EMAILPASS}" > /etc/postfix/sasl_passwd
-	echo "${EMAIL}    127.0.0.1:25025" > /etc/postfix/sender_relay
+    echo "[127.0.0.1]:2525    ${EMAIL}:${EMAILPASS}" > /etc/postfix/sasl_passwd
+	echo "${EMAIL}    [127.0.0.1]:2525" > /etc/postfix/sender_relay
     postmap /etc/postfix/sasl_passwd
 	postmap /etc/postfix/sender_relay
     rm /etc/postfix/sasl_passwd

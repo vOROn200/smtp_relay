@@ -16,6 +16,6 @@ docker run -i -t --rm --name smtp_relay -p 9025:25 \
        -e SYSTEM_TIMEZONE="Europe/Kiev" \ 
 	   -e MYNETWORKS="10.0.0.0/8 192.168.0.0/16 172.0.0.0/8" \ 
 	   -e EMAIL="mymail@yandex.ru" \ 
-	   -e EMAILPASS="mapassword" 
+	   -e EMAILPASS="mypassword" 
 ```
 
