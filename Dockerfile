@@ -8,7 +8,7 @@ USER root
 RUN apt-get update && apt-get -q -y install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules stunnel4 syslog-ng syslog-ng-core supervisor \
 # main.cf
 && postconf -e smtpd_banner="\$myhostname ESMTP" \
-&& postconf -e relayhost=127.0.0.1:25025 \
+&& postconf -e relayhost=127.0.0.1:2525 \
 && postconf -e smtp_sasl_auth_enable=yes \
 && postconf -e smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd \
 && postconf -e smtp_sasl_security_options=noanonymous \
