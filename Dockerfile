@@ -30,6 +30,7 @@ RUN apt-get update && apt-get -q -y install postfix mailutils libsasl2-2 ca-cert
 ADD supervisord.conf /etc/supervisor/
 ADD init.sh /opt/init.sh
 ADD yandex.conf /etc/stunnel/yandex.conf
+RUN chmod a+x /opt/init.sh
 
 EXPOSE 25
 
